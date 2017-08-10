@@ -1,0 +1,38 @@
+<h1>Reports#Edit</h1>
+
+<form action="/reports/<%= @report.id %>" method="post">
+  
+  <input type="hidden" name="_method" value="put">
+
+  <label>Description</label>
+  <input
+   type="text"
+   name="report[desc]"
+   value="<%= @report.desc %>"
+   >
+  <br>
+  <label>Temperature</label>
+  <input
+    type="number"
+    name="report[temp]"
+    value="<%= @report.temp %>"
+  >
+  <br>
+  <label>Humidity</label>
+  <input
+    type="number"
+    name="report[humidity]"
+    value="<%= @report.humidity %>"
+  >
+  <br>
+  <label>Location</label>
+  <input
+    type="text"
+    name="report[loc]"
+    value="<%= @report.loc %>"
+  >
+  <br>
+  <input type="submit" name="" value="Edit">
+</form>
+
+<p><a href="/reports/<%= @report.id %>">Back</a></p>

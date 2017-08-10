@@ -1,0 +1,12 @@
+<h1>Reports#Index</h1>
+
+<p><a href="/reports/new">Add a report</a></p>
+
+<% @reports.each do |report| %>
+  <h3><%= report.loc %></h3>
+  <%= report.desc %>     <br>
+
+  <a href="/reports/<%= report.id %>">See more</a>
+
+  <br>
+<% end %>
